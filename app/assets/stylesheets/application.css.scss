@@ -1,0 +1,24 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html{
+	overflow-y:scroll
+}
+body{
+	padding-top : 60px
+}
+.table-hover {
+   width: 60% !important;
+}
+
+.table tr {
+   line-height: 20px;
+   min-height: 20px;
+   height: 20px;
+}
+.table th {
+   text-align: center;   
+    background-color: lightblue;
+    color: white;
+}
+
