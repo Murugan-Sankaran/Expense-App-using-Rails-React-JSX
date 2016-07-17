@@ -33,7 +33,7 @@ var Records = React.createClass({
     var credits = this.state.records.filter(function(val) {
       return val.amount >= 0
     });
-    return credits.reduce(function(prev, curr) {
+    return credits.reduce(function(prev, curr){
       return prev + parseFloat(curr.amount);
     }, 0)
   },
@@ -42,7 +42,7 @@ var Records = React.createClass({
     var debits = this.state.records.filter(function(val) {
       return val.amount < 0
     });
-    return debits.reduce(function(prev, curr) {
+    return debits.reduce(function(prev, curr){
       return prev + parseFloat(curr.amount)
     }, 0)
   },
