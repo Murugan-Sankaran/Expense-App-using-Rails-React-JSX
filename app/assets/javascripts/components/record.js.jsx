@@ -37,7 +37,7 @@ var Record = React.createClass({
 			this.props.handleUpdateRecord(data);		
 			this.setState({editable:!this.state.editable});
 		}.bind(this)
-	});
+	 });
 	}
 },
 
