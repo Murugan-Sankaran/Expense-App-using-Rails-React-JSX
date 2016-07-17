@@ -4079,3 +4079,37 @@ Processing by RecordsController#destroy as JSON
 Completed 200 OK in 120ms (Views: 0.4ms | ActiveRecord: 101.0ms)
 
 
+Started GET "/records/" for ::1 at 2016-07-17 17:39:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (56.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  Rendered records/index.html.erb within layouts/application (23.0ms)
+Completed 500 Internal Server Error in 329ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Ruby22/Expense-App/app/views/records/index.html.erb:1: syntax error, unexpected ']', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...a:@records.as_json(only:[:id,:])} );@output_buffer.safe_appe...
+...                               ^
+C:/Ruby22/Expense-App/app/views/records/index.html.erb:3: syntax error, unexpected keyword_ensure, expecting ')'
+C:/Ruby22/Expense-App/app/views/records/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/records/index.html.erb:1: syntax error, unexpected ']', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/views/records/index.html.erb:3: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/records/index.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (3723.2ms)
+Started GET "/records/" for ::1 at 2016-07-17 17:40:06 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (107.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (213.0ms)
+Completed 200 OK in 13968ms (Views: 13724.6ms | ActiveRecord: 189.0ms)
+
+
