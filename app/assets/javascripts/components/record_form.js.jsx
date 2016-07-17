@@ -32,6 +32,7 @@ var RecordForm = React.createClass({
 _onFocus: function(e){
     e.currentTarget.type = "date";
 },
+
 _onBlur: function(e){
     e.currentTarget.type = "text";
     e.currentTarget.placeholder = "Enter a Date";
