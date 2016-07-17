@@ -1,4 +1,5 @@
 class RecordsController < ApplicationController
+
   def index
 	@records = Record.all
   end
@@ -23,8 +24,8 @@ class RecordsController < ApplicationController
 	render json: @record	
   end
 
-private
-def record_params
-	params.require(:record).permit(:amount,:title,:date)
-end
+	private
+	def record_params
+		params.require(:record).permit(:amount,:title,:date)
+	end
 end
