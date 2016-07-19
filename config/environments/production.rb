@@ -12,7 +12,7 @@ Rails.application.configure do
 	
 	config.eager_load = true
 	config.active_record.migration_error = :page_load
-	config.cache_store = :dalli_store => config.cache_store = :mem_cache_store
+	#config.cache_store = :dalli_store => config.cache_store = :mem_cache_store
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
