@@ -4113,3 +4113,338 @@ Processing by RecordsController#index as HTML
 Completed 200 OK in 13968ms (Views: 13724.6ms | ActiveRecord: 189.0ms)
 
 
+Started GET "/records" for ::1 at 2016-07-21 10:30:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (102.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (154.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (380.0ms)
+Completed 200 OK in 6772ms (Views: 6319.4ms | ActiveRecord: 286.0ms)
+
+
+Started POST "/records" for ::1 at 2016-07-21 10:30:38 +0530
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"Mutton", "date"=>"2016-07-14", "amount"=>"450"}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (97.0ms)[0m  [1m[32mINSERT INTO "records" ("date", "title", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 14 Jul 2016], ["title", "Mutton"], ["amount", 450], ["created_at", 2016-07-21 05:00:39 UTC], ["updated_at", 2016-07-21 05:00:39 UTC]]
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 213ms (Views: 1.9ms | ActiveRecord: 139.0ms)
+
+
+Started PUT "/records/27" for ::1 at 2016-07-21 10:31:02 +0530
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"date"=>"2016-07-14", "title"=>"Mutton", "amount"=>"45"}, "id"=>"27"}
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT  "records".* FROM "records" WHERE "records"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (28.0ms)[0m  [1m[33mUPDATE "records" SET "amount" = $1, "updated_at" = $2 WHERE "records"."id" = $3[0m  [["amount", 45], ["updated_at", 2016-07-21 05:01:02 UTC], ["id", 27]]
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 156ms (Views: 1.8ms | ActiveRecord: 46.0ms)
+
+
+Started PUT "/records/27" for ::1 at 2016-07-21 10:31:13 +0530
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"date"=>"2016-07-14", "title"=>"Mutton", "amount"=>"-50"}, "id"=>"27"}
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT  "records".* FROM "records" WHERE "records"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "records" SET "amount" = $1, "updated_at" = $2 WHERE "records"."id" = $3[0m  [["amount", -50], ["updated_at", 2016-07-21 05:01:13 UTC], ["id", 27]]
+  [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 52ms (Views: 1.7ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-31 13:19:30 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (96.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (128.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (320.0ms)
+Completed 200 OK in 7275ms (Views: 6892.8ms | ActiveRecord: 248.0ms)
+
+
+Started POST "/" for ::1 at 2016-07-31 13:20:09 +0530
+Processing by RecordsController#index as JSON
+  Parameters: {"record"=>{"title"=>"Mutton", "date"=>"2016-07-06", "amount"=>"150"}}
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1376ms (Views: 892.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for ::1 at 2016-07-31 13:20:12 +0530
+Processing by RecordsController#index as JSON
+  Parameters: {"record"=>{"title"=>"Mutton", "date"=>"2016-07-06", "amount"=>"150"}}
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1388ms (Views: 881.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/records" for ::1 at 2016-07-31 13:20:34 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 570ms (Views: 524.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/records/undefined" for ::1 at 2016-07-31 13:20:38 +0530
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT  "records".* FROM "records" WHERE "records"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 47ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Record with 'id'=undefined):
+  
+app/controllers/records_controller.rb:17:in `destroy'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (15.6ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (3128.0ms)
+Started GET "/records/" for ::1 at 2016-07-31 13:23:14 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 594ms (Views: 530.2ms | ActiveRecord: 8.0ms)
+
+
+Started DELETE "/records/undefined" for ::1 at 2016-07-31 13:23:18 +0530
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"undefined"}
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT  "records".* FROM "records" WHERE "records"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Record with 'id'=undefined):
+  
+app/controllers/records_controller.rb:17:in `destroy'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (3187.0ms)
+Started GET "/records/" for ::1 at 2016-07-31 13:23:58 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 660ms (Views: 613.2ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/records/24" for ::1 at 2016-07-31 13:24:12 +0530
+Processing by RecordsController#destroy as JSON
+  Parameters: {"id"=>"24"}
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT  "records".* FROM "records" WHERE "records"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (78.0ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 24]]
+  [1m[35m (31.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 140ms (Views: 0.4ms | ActiveRecord: 109.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-31 13:24:30 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 561ms (Views: 496.8ms | ActiveRecord: 8.0ms)
+
+
+Started PUT "/records/25" for ::1 at 2016-07-31 13:24:46 +0530
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"date"=>"2016-07-07", "title"=>"Mar", "amount"=>"500"}, "id"=>"25"}
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT  "records".* FROM "records" WHERE "records"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (78.0ms)[0m  [1m[33mUPDATE "records" SET "title" = $1, "updated_at" = $2 WHERE "records"."id" = $3[0m  [["title", "Mar"], ["updated_at", 2016-07-31 07:54:46 UTC], ["id", 25]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 140ms (Views: 2.1ms | ActiveRecord: 78.0ms)
+
+
+Started POST "/" for ::1 at 2016-07-31 13:25:14 +0530
+Processing by RecordsController#index as JSON
+  Parameters: {"record"=>{"title"=>"mu", "date"=>"2016-07-07", "amount"=>"150"}}
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1393ms (Views: 908.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for ::1 at 2016-07-31 13:25:16 +0530
+Processing by RecordsController#index as JSON
+  Parameters: {"record"=>{"title"=>"mu", "date"=>"2016-07-07", "amount"=>"150"}}
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (15.6ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1366ms (Views: 888.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-31 13:25:31 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (3.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 576ms (Views: 517.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/" for ::1 at 2016-07-31 13:25:49 +0530
+Processing by RecordsController#index as JSON
+  Parameters: {"record"=>{"title"=>"popo", "date"=>"2016-07-06", "amount"=>"908"}}
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 1471ms (Views: 1003.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-31 13:32:51 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (2.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 614ms (Views: 564.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/" for ::1 at 2016-07-31 13:43:21 +0530
+Processing by RecordsController#index as JSON
+  Parameters: {"record"=>{"title"=>"asdf", "date"=>"2016-07-08", "amount"=>"123"}}
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 1422ms (Views: 936.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-31 13:54:06 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/railties-5.0.0/lib/rails/templates/rails/welcome/index.html.erb (8.0ms)
+Completed 200 OK in 251ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/records" for ::1 at 2016-07-31 13:54:12 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 697ms (Views: 593.2ms | ActiveRecord: 18.0ms)
+
+
+Started POST "/records" for ::1 at 2016-07-31 13:54:28 +0530
+Processing by RecordsController#create as JSON
+  Parameters: {"record"=>{"title"=>"asdf", "date"=>"2016-07-07", "amount"=>"134"}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (171.6ms)[0m  [1m[32mINSERT INTO "records" ("date", "title", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["date", Thu, 07 Jul 2016], ["title", "asdf"], ["amount", 134], ["created_at", 2016-07-31 08:24:28 UTC], ["updated_at", 2016-07-31 08:24:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 234ms (Views: 2.0ms | ActiveRecord: 171.6ms)
+
+
+Started GET "/records" for ::1 at 2016-07-31 14:50:05 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 15775ms (Views: 15720.2ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/records/26" for ::1 at 2016-07-31 14:50:33 +0530
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"date"=>"2016-07-01", "title"=>"Mutton", "amount"=>"120"}, "id"=>"26"}
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT  "records".* FROM "records" WHERE "records"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "records" SET "amount" = $1, "updated_at" = $2 WHERE "records"."id" = $3[0m  [["amount", 120], ["updated_at", 2016-07-31 09:20:33 UTC], ["id", 26]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 28ms (Views: 1.3ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/records/26" for ::1 at 2016-07-31 14:50:43 +0530
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"date"=>"2016-07-01", "title"=>"Mutton", "amount"=>"120"}, "id"=>"26"}
+  [1m[36mRecord Load (2.5ms)[0m  [1m[34mSELECT  "records".* FROM "records" WHERE "records"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 18ms (Views: 1.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/records" for ::1 at 2016-07-31 14:50:46 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 593ms (Views: 542.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/records" for ::1 at 2016-07-31 14:51:09 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 618ms (Views: 555.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/records" for ::1 at 2016-07-31 14:51:21 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 625ms (Views: 574.3ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/records/26" for ::1 at 2016-07-31 14:51:40 +0530
+Processing by RecordsController#update as JSON
+  Parameters: {"record"=>{"date"=>"2016-07-01", "title"=>"Mutton", "amount"=>"-120"}, "id"=>"26"}
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT  "records".* FROM "records" WHERE "records"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "records" SET "amount" = $1, "updated_at" = $2 WHERE "records"."id" = $3[0m  [["amount", -120], ["updated_at", 2016-07-31 09:21:40 UTC], ["id", 26]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 16ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/records" for ::1 at 2016-07-31 14:56:41 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 2350ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: unknown: Unexpected type cast (8:19)
+   6 | 
+   7 |  getDefaultProps:function(){
+>  8 | 	return { record :[title : '', date : '', amount : '' ]}
+     |                    ^
+   9 | },
+  10 | 
+  11 |  handleChange : function(e){):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__411670054_90752028'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.5ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (3590.1ms)
+Started GET "/records" for ::1 at 2016-07-31 14:57:41 +0530
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  Rendered records/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 653ms (Views: 590.4ms | ActiveRecord: 0.0ms)
+
+
